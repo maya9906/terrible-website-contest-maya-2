@@ -9,36 +9,81 @@ main{
     display: flex;
 }
 
-/* styling for nav bar */
+/*----------------------------------nav-----------------------------*/
 .navbar{
-    display: flex;
-    justify-content: left;
-    align-items: center;
     background-color: rgb(26, 26, 26);
     position: fixed;
     width: 100%;
 }
-
-.hamburger{
-    display: none;
+.navbar div {
+    margin-left: 20px;
+}
+ 
+.navbar h1{
+    color: white;
+}
+ 
+.navbar div p{
+    color: yellow;
 }
 
+.navbar-contents{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    white-space: nowrap; /*巻き返さない */
+    animation: animate-banner 20s linear infinite;
+}
+
+/* 横にスクロールさせるアニメーション */
+@keyframes animate-banner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);  /* 100%の時は右に動く */
+  }
+}
+
+.navbar div {
+    margin-left: 20px;
+}
+ 
+.navbar h1{
+    color: white;
+}
+ 
+.navbar div p{
+    color: yellowgreen;
+}
+.scam{
+    position: absolute;
+    position: fixed;
+    left: 70%;
+    top: 10%;
+}
+
+.scamimg{
+    width: 300px;
+}
+
+#C{
+    display: none;
+}
+.C{
+    display: inline-block;
+}
+.C{
+    background-color: aliceblue;
+}
+#C:checked+label+.S{
+    display: none;
+}
 .logo {
     width: 50px;
     height: 30px;
 }
 
-.navbar div {
-   margin-left: 20px;
-}
-
-.navbar h1{
-    color: white;
-}
-
-.navbar div p{
-    color: antiquewhite;
-}
 
 /* styling for side bar */
 
@@ -135,13 +180,19 @@ main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 60px;
-    margin: 2rem 50px;
+    margin: 1rem 50px;
     border: 1px solid gray;
     border-radius: 4px;
+    background-color: white;
 }
 
 .infomation-continer div{
     margin: 20px auto;
+}
+
+.infomation-continer-item1:hover{
+    color: orange;
+    cursor: pointer;
 }
 
 .login{
@@ -149,6 +200,7 @@ main{
     width: 80vw; 
     border: 1px solid gray;
     border-radius: 4px;
+    background-color: white;
 }
 
 .login-item1 :hover{
@@ -290,6 +342,12 @@ main{
     width: 350px;
     height: 200px;
     margin: 0 auto;
+    overflow: hidden;
+}
+
+.ranking-item:hover{
+    transform: scale(1.15 1.15);
+    transition: 0.3s all;
 }
 
 .ranking-container div{
@@ -324,6 +382,11 @@ main{
 
 .info-items{
     background-color: white;
+}
+
+.info-items:hover{
+    transform:scale(1.1,1.1);
+    transition:0.5s all;
 }
 
 .infopic{
@@ -482,6 +545,11 @@ main{
     border: 1px solid rgb(107, 106, 106);
     padding: 5px;
     border-radius: 5px;
+    background-color: white;
+}
+
+.notice-container-item:hover{
+    background-color: rgb(212, 212, 212);
 }
 
 .notice-img{
