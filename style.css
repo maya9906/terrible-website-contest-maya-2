@@ -31,8 +31,12 @@ main{
     display: flex;
     justify-content: left;
     align-items: center;
-    white-space: nowrap; /*巻き返さない */
+    white-space: nowrap; /*巻き返さない */ 
     animation: animate-banner 20s linear infinite;
+    /* animate-banner: これは適用するアニメーションの名称
+    20s: アニメーションの継続時間
+    linearは等速でアニメーションが進行することを意味する。
+    infiniteが アニメーションの繰り返しを指定 */
 }
 
 /* 横にスクロールさせるアニメーション */
@@ -43,6 +47,8 @@ main{
   100% {
     transform: translateX(-100%);  /* 100%の時は右に動く */
   }
+  /* 0%のキーフレームはアニメーションの開始位置を示し、要素は移動しない。
+  一方、100%のキーフレームはアニメーションの終了位置を示し、要素は左に100%移動する。 */
 }
 
 .navbar div {
